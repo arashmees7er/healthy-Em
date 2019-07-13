@@ -1,0 +1,21 @@
+.el-pagination {
+    padding: 0;
+
+    &.is-background {
+        .btn-prev,
+        .btn-next,
+        .el-pager li:not(.disabled) {
+            background-color: $tl-white;
+            box-shadow: $box-shadow-sm;
+    
+            &.active {
+                background-color: $tl-blue-darken;
+            }
+    
+            &:hover {
+                box-shadow: $box-shadow-sm;
+            }
+
+        }
+    }
+}

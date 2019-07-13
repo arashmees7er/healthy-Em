@@ -1,0 +1,191 @@
+$color_1: #fff;
+$color_2: rgba(0, 0, 0, 0.38);
+$color_3: rgba(0, 0, 0, 0.87);
+$background_color_1: rgba(0, 0, 0, 0.1);
+$background_color_2: rgba(0, 0, 0, 0.06);
+
+ul.stepper {
+    padding-left: 0px;
+
+    li {
+        .step-title {
+            padding-top: 1rem;
+            text-align: center;
+
+            .circle {
+                display: inline-block;
+                color: $color_1;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.38);
+                text-align: center;
+                margin-right: .5rem;
+            }
+
+            .label {
+                display: inline-block;
+                color: $color_2;
+            }
+        }
+    }
+
+    li.active {
+        .step-title {
+            .label {
+                font-weight: 600;
+                color: $color_3;
+            }
+        }
+    }
+
+    li.completed {
+        .step-title {
+            .label {
+                font-weight: 600;
+                color: $color_3;
+            }
+        }
+    }
+}
+
+.stepper-horizontal {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        transition: .5s;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        position: relative;
+
+        .step-title {
+            .label {
+                margin-top: .63rem;
+            }
+        }
+
+        &:not(:last-child) {
+            &:after {
+                content: "";
+                position: relative;
+                flex: 1;
+                margin: .5rem 0 0 0;
+                height: 1px;
+                background-color: $background_color_1;
+            }
+        }
+
+        &:not(:first-child) {
+            &:before {
+                content: "";
+                position: relative;
+                flex: 1;
+                margin: .5rem 0 0 0;
+                height: 1px;
+                background-color: $background_color_1;
+            }
+        }
+
+        &:hover {
+            background-color: $background_color_2;
+        }
+    }
+
+    > li {
+        &:not(:last-of-type) {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.stepper-vertical {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+
+        .step-title {
+            align-self: flex-start;
+            display: flex;
+            position: relative;
+
+            .circle {
+                order: 1;
+            }
+
+            .label {
+                flex-flow: column nowrap;
+                order: 2;
+                margin-top: .2rem;
+            }
+        }
+
+        .step-content {
+            display: block;
+            margin-top: 0;
+            margin-left: 1.25rem;
+            padding-left: .94rem;
+
+        }
+
+        &:not(:last-child) {
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: -webkit-calc(100% - 40px);
+                height: calc(100% - 40px);
+                left: .875rem;
+                top: 3.125rem;
+                background-color: $background_color_1;
+            }
+        }
+    }
+
+    li.completed {
+        .step-title {
+            .label {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 47.9375rem) {
+    .stepper-horizontal {
+        flex-direction: column;
+
+        li {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .step-title {
+                .label {
+                    flex-flow: column nowrap;
+                    order: 2;
+                    margin-top: .2rem;
+                }
+            }
+
+            &:not(:last-child) {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: -webkit-calc(100% - 40px);
+                    height: calc(100% - 40px);
+                    left: 2.19rem;
+                    top: 3.75rem;
+                }
+            }
+        }
+    }
+}

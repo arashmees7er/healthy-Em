@@ -1,0 +1,13 @@
+.el-popover {
+    font-size: map-get($tl-font-sizes, base);
+    line-height: map-get($tl-line-height, base);
+    text-align: left;
+}
+
+// .el-popper[x-placement^="bottom"] {
+//     margin-top: 10px;
+// }
+
+// .el-popper {
+//     z-index: 1030 !important;
+// }

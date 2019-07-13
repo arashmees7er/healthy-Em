@@ -1,0 +1,44 @@
+%default-dialog-style {
+    padding: 1.5rem;
+    color: $tl-text-base;
+}
+
+.el-dialog {
+    border-radius: .3rem;
+    width: 92vw;
+
+    @include media-breakpoint-up(lg) {
+        width: 70vw;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        width: 50vw;
+    }
+
+}
+
+.el-dialog__title {
+    font-size: map-get($tl-font-sizes, lg);
+    font-weight: bold;
+    color: $tl-text-dark;
+}
+
+.el-dialog__header {
+    @extend %default-dialog-style;
+    border-bottom: 1px solid #eceeef;
+    margin-bottom: 1rem;
+}
+
+.el-dialog__body {
+    padding: 0 1.5rem;
+    font-size: map-get($tl-font-sizes, base);
+}
+
+.el-dialog__footer {
+    @extend %default-dialog-style;
+}
+
+.el-dialog__headerbtn {
+    top: 18px;
+}

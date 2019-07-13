@@ -1,0 +1,52 @@
+.listing-wrapper {
+
+  .listing-title {
+    color: $tl-blue;
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: 600;
+  }
+
+  .listing-row {
+    background-color: $tl-white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: background .2s linear;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .listing-item {
+    padding: 1.5rem 1rem;
+    transition: border-width .3s ease;
+
+    &:hover {
+      background-color: $tl-listing-hover-bg;
+    }
+
+    &.show {
+      border-bottom: 1px solid $tl-border-color;
+    }
+
+    &.active {
+      border-left: 4px solid $tl-blue;
+      background-color: $tl-listing-hover-bg;
+    }
+
+    &>[class*="col-"] {
+      margin-bottom: .5rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .listing-collapse-content {
+    padding: 0 1.5rem;
+  }
+
+  &.el-loading-parent--relative {
+    min-height: 527px;
+  }
+}

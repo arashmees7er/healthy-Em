@@ -1,0 +1,33 @@
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: $tl-blue;
+}
+
+.el-form-item__error {
+    position: relative;
+}
+
+.el-form-item__label {
+  color: $tl-text-base;
+  font-size: map-get($tl-font-sizes, base);
+}
+
+.el-form-item--medium .el-form-item__content,
+.el-form-item--medium .el-form-item__label {
+  line-height: 1.5;
+}
+
+.el-form-item__content {
+  font-size: map-get($tl-font-sizes, base);
+}
+
+.el-form-item {
+    margin-bottom: .5rem;
+}
+
+.el-form-item-label  {
+    padding-top: calc(.5rem + 1px);
+    margin-bottom: 0;
+}

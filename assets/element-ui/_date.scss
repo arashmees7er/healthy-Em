@@ -1,0 +1,64 @@
+.el-date-editor {
+    .el-range-separator {
+        color: $tl-text-base;
+    }
+
+    &.el-input,
+    .el-input__inner {
+        width: 100%;
+    }
+
+    .el-input__icon {
+        &:hover {
+            color: darken($tl-blue, 10%) !important;
+        }
+    }
+}
+
+.el-date-range-picker {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+.el-time-panel__btn.confirm {
+    font-weight: 600;
+}
+
+.el-time-panel__content {
+    &::after,
+    &::before {
+        padding-top: 0;
+        margin-top: -8px;
+        height: 33px;
+    }
+
+    &::after {
+        border-top: 1px solid rgba(32, 160, 255, 0.1);
+        border-bottom: 1px solid rgba(32, 160, 255, 0.1);
+    }
+
+    &::before {
+        border-top: 1px solid rgba(32, 160, 255, 0.2);
+        border-bottom: 1px solid rgba(32, 160, 255, 0.2);
+        background-color: rgba(32, 160, 255, 0.1);
+    }
+
+    .el-time-spinner__wrapper {
+        overflow: hidden;
+    }
+
+    .el-time-spinner__item.active:not(.disabled) {
+        color: $tl-blue;
+        font-weight: 600;
+    }
+}
+
+.el-date-editor--daterange.el-input__inner {
+    width: 100%;
+    cursor: pointer;
+}
+
+.el-date-editor .el-range-input {
+    color: $tl-blue;
+}

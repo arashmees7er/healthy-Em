@@ -1,0 +1,30 @@
+.layout_filter_group {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
+
+
+    .layout_filter_input {
+        margin-bottom: .75rem;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+
+        &:not(:first-child):not(:last-child), &:not(:first-child):not(:last-child) .el-input__inner {
+            border-radius: 0;
+        }
+
+        &:first-child, &:first-child .el-input__inner {
+            border-radius: 3px 0 0 3px;
+        }
+
+        &:last-child, &:last-child .el-input__inner {
+            border-radius: 0 3px 3px 0;
+        }
+    }
+}

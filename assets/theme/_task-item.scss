@@ -1,0 +1,43 @@
+
+.dashboard_task_infobox {
+  border: 1px solid $tl-light;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border .3s linear;
+
+  &:hover {
+    border-color: $tl-light-blue;
+  }
+
+  .task_infobox_avatar {
+    background-color: $tl-aside-bg;
+  }
+
+  .task_infobox_content {
+    padding: 1rem;
+    border-right: 1px solid $tl-light;
+    transition: border .3s linear;
+  }
+
+  .task_infobox_day {
+    text-align: center;
+    padding: 0 .25rem;
+    
+    &.is_recently {
+      color: $tl-blue;
+    }
+
+    &.is_past {
+      color: $tl-red;
+    }
+
+    &.is_today {
+      color: $tl-text-muted;
+    }
+
+    .day_ago {
+      line-height: 1;
+      font-size: .675rem;
+    }
+  }
+}

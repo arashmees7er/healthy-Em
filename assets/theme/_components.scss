@@ -1,0 +1,73 @@
+// Icons
+.rectangle-gradient-box {
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, #936fdb, #67c8ee);
+  border-image-slice: 1;
+
+  &.md {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// Divider
+.divider,
+.divider-vert {
+  display: block;
+  position: relative;
+}
+
+.divider-vert[data-content]::after,
+.divider[data-content]::after {
+  background: $tl-white;
+  color: $tl-text-muted;
+  content: attr(data-content);
+  display: inline-block;
+  font-size: .7rem;
+  padding: 0 .4rem;
+  transform: translateY(-13px);
+}
+
+.divider {
+  border-top: 1px solid $tl-border-color;
+  height: 1px;
+  margin: 0.4rem 0;
+}
+
+.divider[data-content] {
+  margin: 0.8rem 0;
+}
+
+.divider-vert {
+  display: block;
+}
+
+.divider-vert::before {
+  border-left: 1px solid $tl-border-color;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.divider-vert[data-content]::after {
+  left: 50%;
+  padding: .2rem 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Avatars
+.avatar-list-group {
+  .avatar {
+    margin: .25rem;
+  }
+}
+

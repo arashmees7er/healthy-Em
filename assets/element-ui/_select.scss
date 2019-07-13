@@ -1,0 +1,24 @@
+.el-select-dropdown__item {
+  font-size: map-get($tl-font-sizes, base);
+  color: $tl-text-base;
+
+  &.selected {
+    color: $tl-white;
+    background-color: $tl-blue;
+
+    .secondary-label {
+      color: $tl-white;
+    }
+  }
+
+  &.hover:not(.selected),
+  &:hover:not(.selected) {
+    background-color: $tl-select-hover-bg;
+  }
+
+  .secondary-label {
+    color: $tl-text-muted;
+  }
+}
+
+

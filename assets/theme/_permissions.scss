@@ -1,0 +1,191 @@
+.permission_section {
+    margin-bottom: 1.5rem;
+}
+
+.permission_section_header {
+    background-color: $tl-light;
+    padding: .75rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.permission_section_title {
+    font-weight: bold;
+    font-size: map-get($tl-font-sizes, "md");
+}
+
+.permission_tab_panel /deep/ {
+    @for $i from 1 through 4 {
+        $value: $i * 36px;
+
+        .permission_offset_#{$i} {
+            padding-left: #{$value};
+        }
+    }
+
+    .permission_remarks {
+        display: inline-block;
+        text-align: center;
+        min-width: 70px;
+        padding: .25rem;
+        color: $gray-800;
+        background-color: $tl-light-blue;
+    }
+
+    .permission_checkbox,
+    .permission_radio {
+        display: flex;
+        margin-bottom: .5rem;
+        white-space: normal;
+
+        &.is-disabled {
+            .permission_remarks {
+                color: $tl-text-muted;
+            }
+        }
+
+        &.is-checked {
+            .el-checkbox__label,
+            .el-radio__label {
+                color: $tl-text-base;
+            }
+        }
+
+        &.no_label {
+            .el-checkbox__input {
+                flex: 1;
+            }
+        }
+
+        .el-checkbox__input,
+        .el-radio__input {
+            min-width: 36px;
+        }
+
+        .el-checkbox__label,
+        .el-radio__label {
+            flex: 1;
+            padding-left: 0;
+            align-self: center;
+        }
+    }
+
+    .permission_checkbox {
+        .el-checkbox__inner {
+            border-width: 2px;
+            background-color: $tl-white;
+            width: 20px;
+            height: 20px;
+
+            &:after {
+                border-width: 2px;
+                border-color: $tl-blue;
+                width: 3px;
+            }
+        }
+
+        &.is-disabled .el-checkbox__inner {
+            background-color: $tl-disable-bg;
+
+            &:after {
+                border-color: $tl-text-muted;
+            }
+        }
+    }
+
+    .permission_radio {
+        .el-radio__inner {
+            border-width: 2px;
+            width: 20px;
+            height: 20px;
+        }
+
+        & + .permission_radio {
+            margin-left: 0;
+        }
+    }
+
+    .permission_transfer {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-left: -.4rem;
+        margin-right: -.4rem;
+        padding-bottom: .5rem;
+
+        .el-transfer-panel {
+            display: block;
+            flex: none;
+            max-width: 100%;
+            width: 200px;
+
+            @include media-breakpoint-up(md) {
+                width: 220px;
+            }
+
+
+            .el-transfer-panel__header .el-checkbox .el-checkbox__label {
+                font-weight: bold;
+                color: $tl-text-muted;
+                padding-left: 10px;
+                font-size: map-get($tl-font-sizes, "md");
+            }
+
+            .el-transfer-panel__item.el-checkbox .el-checkbox__label {
+                padding-left: 10px;
+                line-height: 1.25;
+                white-space: normal;
+            }
+        }
+
+        .el-transfer-panel__item {
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            white-space: normal;
+
+            .el-checkbox__input {
+                line-height: 0;
+                position: relative;
+                top: 0;
+            }
+        }
+
+        .el-checkbox__inner {
+            border-width: 2px;
+            background-color: $tl-white;
+            width: 20px;
+            height: 20px;
+
+            &:after {
+                border-width: 2px;
+                border-color: $tl-blue;
+                width: 3px;
+            }
+        }
+
+        .el-transfer__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: none;
+            width: 50px;
+            padding: 0 8px;
+        }
+
+        .el-transfer__button {
+            margin: 0;
+            padding: .25rem .5rem;
+
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.permission_section_content {
+    padding: 0 1.5rem;
+}

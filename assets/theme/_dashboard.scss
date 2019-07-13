@@ -1,0 +1,74 @@
+.dashboard_action_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background-color: $tl-white;
+  transition: all .3s linear;
+  cursor: pointer;
+
+  &:hover{
+     background-color: $tl-listing-active-bg;
+  }
+}
+.dashboard_action_box.blue {
+  background-color: $tl-light-blue;
+}
+
+.dashboard_event_box {
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #ccc;
+  margin-bottom: 1.5rem;
+  background-color: $tl-white;
+
+}
+
+.dashboard_bullet_box {
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, #936fdb 0, #67c8ee);
+  border-image-slice: 1;
+}
+
+.dashboard_user_img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.talentcloud_blue_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 170px;
+  background-color: #a8cfee;
+}
+
+.dashboard_small_font {
+  font-size: 0.8rem;
+}
+.dashboard_text_purple {
+  color: $tl-purple;
+}
+
+.dashboard_badge_purple {
+  background: $tl-purple;
+  padding: 0 0.5rem;
+  margin: 0 1rem;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 4px;
+}
+.dashboard_birthday_icon {
+  color: #3085c2;
+  font-size: 1.8rem;
+}
+
+.divider_bottom {
+  border-bottom: 1px solid $tl-border;
+}

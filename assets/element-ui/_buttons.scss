@@ -1,0 +1,194 @@
+.btn-purple-gradient {
+    background: $tl-purple-gradient;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-purple-gradient;
+    }
+}
+
+.btn-blue-gradient {
+    background: $tl-blue-gradient;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-blue-gradient;
+    }
+}
+
+.btn-cyan-darken {
+    background: $tl-cyan-darken;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-cyan-darken;
+    }
+}
+
+.btn-cyan-accent {
+    background: $tl-cyan-accent;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-cyan-accent;
+    }
+}
+
+.btn-purple-accent {
+    background: $tl-purple-accent;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-purple-accent;
+    }
+}
+
+.btn-blue-darken {
+    background: $tl-blue-darken;
+
+    @include el-button-reset;
+
+    &:hover,
+    &:focus {
+        background: $tl-blue-darken;
+    }
+}
+
+.btn-text {
+    color: $tl-text-base;
+    padding: 10px 20px;
+
+    &:hover,
+    &:focus {
+        color: $tl-blue;
+    }
+}
+
+.el-button {
+    border-radius: $tl-border-radius;
+    font-size: map-get($tl-font-sizes, base);
+}
+
+.el-button--primary {
+    background-color: $tl-blue;
+    border-color: $tl-blue;
+
+    &:hover,
+    &:focus {
+        background: darken($tl-blue, $tl-hover-darken-level);
+        border-color: darken($tl-blue, $tl-hover-darken-level);
+    }
+
+    &.is-plain {
+        background: $tl-white;
+        border-color: $tl-blue;
+
+        &:hover,
+        &:focus {
+            background: $tl-blue;
+            border-color: $tl-blue;
+        }
+
+        &.is-disabled,
+        &.is-disabled:active,
+        &.is-disabled:focus,
+        &.is-disabled:hover {
+            color: $tl-text-placeholder;
+            border-color: $tl-border-color;
+            background-color: $tl-white;
+        }
+    }
+}
+
+.el-button {
+    line-height: 1.5;
+    // padding: .375rem .75rem;
+    transition: all .3s ease;
+
+    &.el-button--small {
+        line-height: 1;
+    }
+    &.el-button--medium {
+        padding: 7px 20px;
+    }
+}
+
+.el-button--primary {
+    &:hover,
+    &:focus {
+        background: darken($tl-blue, 10%);
+        border-color: darken($tl-blue, 10%);
+        color: #fff;
+    }
+}
+
+.el-button--primary-outline {
+    color: $tl-blue;
+    border-color: $tl-blue;
+
+    &:hover,
+    &:focus {
+        border-color: darken($tl-blue, 10%);
+        background: darken($tl-blue, 10%);
+        color: #fff;
+    }
+
+    &.is-plain {
+        color: $body-color;
+        border-color: $tl-border;
+
+        &:hover,
+        &:focus {
+            border-color: darken($tl-blue, 10%);
+            background: darken($tl-blue, 10%);
+            color: #fff;
+        }
+    }
+}
+
+.el-button--text {
+    color: $tl-text-muted;
+
+    &:hover,
+    &:focus {
+        color: $tl-blue;
+    }
+}
+
+.el-button--text-primary {
+    color: $tl-blue;
+    border: 0;
+    background: transparent;
+
+    &.is-disabled {
+        background: transparent !important;
+    }
+
+    &:hover,
+    &:focus {
+        color: $tl-blue;
+        background: transparent;
+    }
+}
+
+.el-button--text-success {
+    color: $tl-green;
+    border: 0;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+        color: $tl-green;
+        background: transparent;
+    }
+}
