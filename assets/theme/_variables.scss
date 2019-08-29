@@ -46,7 +46,7 @@ $tl-listing-active-bg: #ecf5ff;
 $tl-disable-bg: #edf2fc;
 
 $tl-box-shadow: 0 0.125rem 0.25rem rgba($tl-black, 0.075);
-$tl-theme-shadow: (green: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4)), yellow: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4)), red: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)));
+$theme-shadow: (green: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4)), yellow: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4)), red: (0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)));
 
 // Select
 $tl-select-hover-bg: lighten($tl-blue, 50%);
@@ -60,7 +60,7 @@ $tl-table-alice-blue: #ECF5FF;
 
 // Font, line-height, and color for body text, headings, and more.
 $tl-font-family-base: "MetaNormalCyrLF-Roman", sans-serif;
-$tl-font-sizes: (base: 0.8125rem, sm: 0.75rem, md: 0.875rem, lg: 1rem);
+$font-sizes: (base: 0.8125rem, sm: 0.75rem, md: 0.875rem, lg: 1rem);
 $tl-font-weight-base: 400;
 $tl-line-height-base: 1.5;
 $tl-line-height: (base: 1.5, xs: 1, sm: 1.25, md: 1.75, lg: 2, xl: 2.65);

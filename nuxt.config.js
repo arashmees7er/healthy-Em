@@ -1,5 +1,4 @@
 import pkg from './package'
-import gg from './pages'
 
 export default {
   mode: 'universal',
@@ -8,14 +7,18 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: gg,
+    title: 'Healthy-EM',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
+      },
     ],
     script: [
       {
@@ -40,6 +43,7 @@ export default {
     "element-ui/lib/theme-chalk/index.css",
     "@/assets/element-ui/element-ui.scss",
     "@/assets/bootstrap/bootstrap.scss",
+    '@/assets/theme/theme.scss',
   ],
 
   /*
@@ -66,6 +70,7 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    extractCSS: false,
   }
 }

@@ -1,21 +1,42 @@
 // Cursor
-@each $cursor in $tl-cursors {
-  .cursor-#{$cursor} { cursor: $cursor; }
-}
+// @each $cursor in $tl-cursors {
+//   .cursor-#{$cursor} { cursor: $cursor; }
+// }
 
 // Line height
-@each  $prop, $value  in $tl-line-height {
-  .line-height-#{$prop} { line-height: $value; }
+// @each  $prop, $value  in $tl-line-height {
+//   .line-height-#{$prop} { line-height: $value; }
+// }
+
+// Min Width
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $size, $length in $sizes {
+      .min-w#{$infix}-#{$size} {
+        min-width: #{$length};
+      }
+    }
+  }
+}
+
+@for $i from 1 through 100 {
+  $value: $i * 10;
+
+  .min-w-px-#{$value} {
+    min-width: #{$value}px;
+  }
 }
 
 // Fonts
-@each  $prop, $value  in $tl-font-sizes {
+@each  $prop, $value  in $font-sizes {
   .font-size-#{$prop} { font-size: $value; }
 }
 
 
-// Fonts
-@each  $prop, $value  in $tl-theme-shadow {
+// Shadows
+@each  $prop, $value  in $theme-shadow {
   .shadow-#{$prop} { box-shadow: $value; }
 }
 
@@ -51,4 +72,8 @@
 
 .z-index-999 {
   z-index: 999;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
